@@ -1,0 +1,21 @@
+<h3 ng-if="list.isEmpty()">
+  <span  class="label label-danger">Nothing found</span>
+</h3>
+<ul>
+  <li ng-repeat="item in list.found">
+    <div class="row">
+      <div class="col-md-3">
+        {{item.name}}
+      </div>
+      <div class="col-md-1">
+        {{item.short_name}}
+      </div>
+      <div class="col-md-5">
+        {{item.description}}
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-warning" ng-click="list.onRemove({index: $index});">Don't Want This One</button>
+      </div>
+    </div>
+  </li>
+</ul>
